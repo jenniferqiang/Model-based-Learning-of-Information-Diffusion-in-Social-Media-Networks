@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jun 24 11:17:15 2019
-
-@author: zh84667
-# -*- coding: utf-8 -*-
-"""
-
 #%clear
 import numpy as np
 import keras
@@ -22,10 +15,8 @@ os.environ["CUDA_VISIBLE_DEVICES"]='1';
 ###########################################
 #%%
 start=time.time()
-df=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\digsourceuser-10000-100000.csv.csv')
-df1=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\digsourceuser-10000-100000.csv.csv')
-#df=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\source-50-2.csv')
-#df1=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\target-50-2.csv')
+df=pd.read_csv(r'digsourceuser-10000-100000.csv.csv')
+df1=pd.read_csv(r'digtargetceuser-10000-100000.csv.csv')
 c=[]
 for i in range(1203):
     c.append(str(i))
@@ -54,7 +45,7 @@ del(X1)
 del(Y1)
 #%%
 #read the neighbors
-A=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\116-1203nodes-adjacency.csv')
+A=pd.read_csv(r'116-1203nodes-adjacency.csv')
 #get the adjacency matrix
 A=A.values
 A=A[:,1:]
