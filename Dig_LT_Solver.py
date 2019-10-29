@@ -1,16 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 29 13:24:43 2019
-
-@author: zh846675
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jun 16 13:04:03 2019
-
-@author: zh846675
-"""
 
 #%clear
 import numpy as np
@@ -21,10 +8,8 @@ from gurobipy import *
 
 #%%
 start=time.time()
-df=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\digsourceuser-10000-100000.csv')
-df1=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\digtargetuser-10000-100000.csv')
-#df=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\source-50-2.csv')
-#df1=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\target-50-2.csv')
+df=pd.read_csv(r'digsourceuser-10000-100000.csv')
+df1=pd.read_csv(r'digtargetuser-10000-100000.csv')
 c=[]
 nodes=1203
 for i in range(1203):
@@ -35,7 +20,7 @@ k=300
 
 #%%
 #define the state of users at the beginning time
-A=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\116-1203nodes-adjacency.csv')
+A=pd.read_csv(r'116-1203nodes-adjacency.csv')
 #get the adjacency matrix
 A=A.values
 A=A[:,1:]
