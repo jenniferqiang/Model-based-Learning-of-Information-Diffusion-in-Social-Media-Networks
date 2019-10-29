@@ -1,16 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 26 15:05:09 2019
-
-@author: zh846675
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jun  5 11:50:44 2019
-
-@author: zh846675
-"""
 
 import tensorflow as tf
 import numpy as np
@@ -25,12 +13,9 @@ from tqdm import tqdm
 from numpy.linalg import matrix_power
 #%%
 start=time.time()
-df=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\digsourceuser-10000-100000.csv')
-df1=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\digtargetuser-10000-100000.csv')
-#df=pd.read_csv(r'digsourceuser-10000-100000-42259.csv')
-#df1=pd.read_csv(r'digtargetuser-10000-100000-42259.csv')
-#df=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\source-50-2.csv')
-#df1=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\target-50-2.csv')
+df=pd.read_csv(r'digsourceuser-10000-100000.csv')
+df1=pd.read_csv(r'digtargetuser-10000-100000.csv')
+
 c=[]
 for i in range(1203):
     c.append(str(i))
@@ -51,8 +36,8 @@ Y_test=Y1[kn:tkn,:]
 tf.reset_default_graph()
 
 #%%
-A=pd.read_csv(r'C:\Users\zh846675\Project2\Demo1\DATASET\Digg2019dataset\116-1203nodes-adjacency.csv')
-#A=pd.read_csv(r'116-42259nodes-adjacency.csv')
+A=pd.read_csv(r'116-1203nodes-adjacency.csv')
+
 #get the adjacency matrix
 A=A.values
 A=A[:,1:]
